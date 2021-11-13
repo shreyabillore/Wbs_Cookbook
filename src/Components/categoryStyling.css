@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 289px;
+  background-color: crimson;
+  margin-left: 10px;
+}
+.recipeImage {
+  height: 200px;
+  width: 200px;
+  border-radius: 26px;
+}
+
+/*  --------------- cards Page ------------------  https://www.pngegg.com/en/search?q=drinks     https://bennettfeely.com/clippy/
+*/
+
+.cardsPageMain {
+  display: flex;
+  background-image: url("./coffeeWallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: 70%, 100%;
+}
+.mainCard {
+  display: flex;
+}
+
+.cardsPageImage {
+}
+.cardsPageShape {
+  margin-left: 300px;
+  width: 1067px;
+  height: 630px;
+  background: rgb(247, 91, 1);
+  clip-path: polygon(48% 0, 100% 0, 100% 100%, 8% 100%);
+}
+
+.cardsPageShapeInside {
+  display: flex;
+  color: aqua;
+  width: 600px;
+  position: relative;
+  left: 470px;
+  top: 100px;
+  height: 410px;
+}
+
+.imageDiv {
+  width: 110px;
+  height: 110px;
+  /*clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);*/
+}
+.recipeImage {
+  width: 110px;
+  height: 110px;
+  border-radius: 50px;
+}
+.cards {
+  margin-left: 20px;
+}
