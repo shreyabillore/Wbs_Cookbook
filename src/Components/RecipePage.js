@@ -1,5 +1,3 @@
-
-
 import React,{useState,useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import { Link, useParams } from 'react-router-dom';
@@ -9,8 +7,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 export default function RecipePage() {
     const {recipeData} =useParams()
 
-    return()
+    return (
+        <div>HI</div>)
 }
+
+
 
   /*  recipe?.map((item, idx) => (
                     <div key={idx} className='card'>

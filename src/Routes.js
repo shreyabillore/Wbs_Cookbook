@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Home from './Components/Home';
 
 import CategoryMain from './Components/CategoryMain'
+import RecipePage from './Components/RecipePage'
 
 export default function Routes() {
     
