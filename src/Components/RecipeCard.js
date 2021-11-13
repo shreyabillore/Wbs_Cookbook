@@ -13,7 +13,7 @@ export default function RecipeCard({ recipe }) {
                </div>
                <div className='title'> {recipe.fields.name}</div>
                {console.log(recipe)}
-              <Link to={`/cards/${recipe.fields}`}> Let's try..</Link>
+              <Link to={`/receipedetail/${recipe.fields}`}> Let's try..</Link>
             </div>
               
       
