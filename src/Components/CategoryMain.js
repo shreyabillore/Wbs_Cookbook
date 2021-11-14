@@ -10,7 +10,6 @@ export default function CategoryMain() {
 
     const {title} =useParams()
     const [recipe, setRecipe] = useState()
- 
     
     console.log(title.toLowerCase())
 
