@@ -3,17 +3,71 @@
   box-sizing: border-box;
 }
 
-.card {
-  width: 289px;
-  background-color: crimson;
-  margin-left: 10px;
-}
-.recipeImage {
-  height: 200px;
-  width: 200px;
-  border-radius: 26px;
+/* ---------------- Recipe Page -------------*/
+
+.recipeCardMain {
+  width: 100%;
+  height: 100%;
 }
 
+.recipeCardMain .card {
+  background-color: rgb(241, 175, 113);
+}
+.subCard {
+  width: 200px;
+  font-size: 24px;
+  width: 500px;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  /* border: 3px solid #f1f1f1; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  border-radius: 60px;
+}
+
+.pic {
+  /* background-image: url("coffeeWallpaper.jpg"); */
+  height: 175px;
+  width: 260px;
+  background-repeat: fit;
+  background-size: cover;
+  border-radius: 50px;
+  position: absolute;
+  top: 26%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+}
+.recipeImage1 {
+  width: 200px;
+  border-radius: 26px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+}
+.ingredients,
+.instructions {
+  margin-top: 26px;
+  line-height: 36px;
+  margin-left: 26px;
+}
+
+.ingredients {
+  width: 500px;
+}
+.recipeImage1 img {
+  height: 800px;
+  width: 700px;
+}
 /*  --------------- cards Page ------------------  https://www.pngegg.com/en/search?q=drinks     https://bennettfeely.com/clippy/
 */
 

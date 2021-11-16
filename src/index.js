@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-import Home from './Components/Home';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-
+import { BrowserRouter} from 'react-router-dom';
+import RecipeContextProvider from './Components/RecipeContext'
 import Routes from './Routes'
 
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <BrowserRouter>
-    <Routes />
+    <RecipeContextProvider>
+         <Routes/>
+    </RecipeContextProvider>
   </BrowserRouter>,
   rootElement
 );

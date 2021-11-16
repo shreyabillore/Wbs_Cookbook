@@ -8,9 +8,9 @@ import CatoryLinks from './CategoryLinks'
 function CategoryLinksParent() {
 
     return (
-        <div className='sidebar'> 
-          <CatoryLinks Icon={SiCoffeescript} title='Coffee' /> 
-          
+        <div className='categoryLinksParent'> 
+        <CatoryLinks Icon={SiCoffeescript} title='Coffee' />
+        
           <CatoryLinks Icon={GiNoodles} title='Dishes' />
           <CatoryLinks Icon={FaCocktail} title='Drinks'/>
         
