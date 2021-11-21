@@ -46,8 +46,9 @@ export default function AddRecipe() {
         .catch(console.error)
 
         updateImageUrl();
-        setAddRecipie({name: '',
-        contentTypedata:'',
+
+        setAddRecipie({name:'',
+        contentTypedata:'Please select option',
         image: '',
         ingredients:[],
         instructions: '',  })
@@ -91,20 +92,20 @@ function updateImageUrl()
                 <div className='formMain' >
                   <form >
                     <label>Recipe Name: </label>
-                    <input type="text" name="name" onChange={(e) => setAddRecipie({ ...addRecipie, name: e.target.value })} />
+                    <input type="text" name="name" value={addRecipie.name}  onChange={(e) => setAddRecipie({ ...addRecipie, name: e.target.value })} />
                         <label for="cars">Choose type of recipe:</label>
-                        <select name="contentTpe" onChange={(e) => setAddRecipie({...addRecipie,contentTypedata:e.target.value})} >
+                        <select name="contentTpe" value={addRecipie.contentTypedata} onChange={(e) => setAddRecipie({...addRecipie,contentTypedata:e.target.value})} >
                             <option value="Please select option">Please select option</option>
                             <option value="coffee">Coffee</option>
                             <option value="dishes" >Dishes</option>
                             <option value="drinks">Drinks</option>
                         </select>
                     <label>Image Url: </label>
-                    <input type="text" name="name" onChange={(e) => setAddRecipie({ ...addRecipie, image: e.target.value })} />
+                    <input type="text" name="name" value={addRecipie.image} onChange={(e) => setAddRecipie({ ...addRecipie, image: e.target.value })} />
                     <label>Ingredients: </label>
-                    <textarea type="text" name="name" onChange={(e) => setAddRecipie({ ...addRecipie, ingredients: e.target.value })} />
+                    <textarea type="text" name="name" value={addRecipie.ingredients} onChange={(e) => setAddRecipie({ ...addRecipie, ingredients: e.target.value })} />
                     <label>Instructions: </label>
-                    <textarea type="text" name="name" onChange={(e) => setAddRecipie({ ...addRecipie, instructions: e.target.value })} />
+                    <textarea type="text" name="name" value={addRecipie.instructions} onChange={(e) => setAddRecipie({ ...addRecipie, instructions: e.target.value })} />
                     {/* <input type="text" name="name" onChange={(e) => setAddRecipie({...addRecipie,url:e.target.value})} /> */}
                     <button type='button' onClick={() => handleClick()}>  Submit </button>
                     </form>
