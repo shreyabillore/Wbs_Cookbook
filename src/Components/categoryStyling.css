@@ -13,10 +13,16 @@
 .recipeCardMain .card {
   background-color: rgb(241, 175, 113);
 }
+
+.card{
+  height: 100vh;
+}
+
+
 .subCard {
-  width: 200px;
+  /* width: 200px; */
   font-size: 24px;
-  width: 500px;
+  /* width: 500px; */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
   color: white;
@@ -26,7 +32,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
+  width: 80vw;
   padding: 20px;
   border-radius: 60px;
 }
@@ -48,7 +54,7 @@
   border-radius: 26px;
   filter: blur(8px);
   -webkit-filter: blur(8px);
-  height: 100%;
+  /* height: 100vh; */
 }
 
 .title {
@@ -73,22 +79,37 @@
 
 .cardsPageMain {
   display: flex;
-  background-image: url("./coffeeWallpaper.jpg");
+  /* background-image: url("./coffeeWallpaper.jpg"); */
+  background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1522&q=80');
   background-repeat: no-repeat;
-  background-size: 70%, 100%;
+  background-size: 150vh;
+ 
 }
+
+/* to toggle class for coffee and dishes background */
+
+.cardsPageMainAnother {
+  display: flex;
+  /* background-image: url("./coffeeWallpaper.jpg"); */
+  background-image: url('https://images.unsplash.com/photo-1518450806633-2bd5a56a5309?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80');
+  background-repeat: no-repeat;
+  background-size: 150vh;
+ 
+}
+
+
+
 .mainCard {
   display: flex;
 }
 
-.cardsPageImage {
-}
 .cardsPageShape {
   margin-left: 300px;
-  width: 1067px;
-  height: 630px;
-  background: rgb(247, 91, 1);
-  clip-path: polygon(48% 0, 100% 0, 100% 100%, 8% 100%);
+  width: 100vw;
+  height: 100vh;
+  /* background: rgb(247, 91, 1); */
+  background-color: rgb(248, 141, 42);
+  clip-path: polygon(38% 0, 100% 0, 100% 100%, 8% 100%);
 }
 
 .cardsPageShapeInside {
@@ -96,10 +117,13 @@
   color: aqua;
   width: 600px;
   position: relative;
-  left: 470px;
-  top: 100px;
-  height: 410px;
+  left: 410px;
+  top: 200px;
+  /* height: 410px; */
+ 
 }
+
+
 
 .imageDiv {
   width: 110px;
@@ -107,10 +131,32 @@
   /*clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);*/
 }
 .recipeImage {
-  width: 110px;
-  height: 110px;
-  border-radius: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
+
 .cards {
-  margin-left: 20px;
+  margin: 6vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bolder;
+
 }

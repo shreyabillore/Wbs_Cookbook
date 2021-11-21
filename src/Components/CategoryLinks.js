@@ -7,7 +7,7 @@ function CategoryLinks({Icon,title}) {
     return (
         <div className='categoryLinksChild'>
             <Icon/>
-            <Link to={`/cards/${title}`} style={{ textDecoration: 'none', color:'#00acee'}}> <h4>{title}</h4> </Link>
+            <Link to={`/cards/${title}`} style={{ textDecoration: 'none'}}> <h4>{title}</h4> </Link>
         </div>
     )
 }

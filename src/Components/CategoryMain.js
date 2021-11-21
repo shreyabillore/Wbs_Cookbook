@@ -2,38 +2,37 @@ import React,{useState,useEffect} from 'react';
 
 import { useParams } from 'react-router-dom';
 import * as contentful from 'contentful';
+import { useContext } from 'react';
+import { RecipeContext } from './RecipeContext';
 
 import RecipeCard from './RecipeCard';
 import './categoryStyling.css';
 
 export default function CategoryMain() {
-
+    const [filteredRecipe,setFilteredRecipe] = useState()
     const {title} =useParams()
-    const [recipe, setRecipe] = useState()
-    
+    const { recipe,client } = useContext(RecipeContext);
     console.log(title.toLowerCase())
+    console.log(recipe)
 
-     var client = contentful.createClient({
-            space: '1w8dvqpp824f',
-            accessToken: 'mtVUs8DgixmtCuq17IbC_zym_xveUEGkZa31X93vVK4'
-    })
-    
-     useEffect(() => {        
-         client.getEntries({ content_type: title.toLowerCase()}).then(entries => { setRecipe(entries.items); console.log(entries.items) }).catch(console.error)
-            }, [])
-    
-   
+    useEffect(() => {        
+        client.getEntries({ content_type: title.toLowerCase()}).then(entries => { setFilteredRecipe(entries.items); console.log(entries.items) }).catch(console.error)
+           }, [])
+           console.log(filteredRecipe)
+
+
+
     return (
         
-        <div className="cardsPageMain">
+        <div  className={ `${title==='Coffee'? "cardsPageMain" : "cardsPageMainAnother"} `}>
 
 
             {/* Right Div with Recipe Suggestions with Image and Title       style={{backgroundImage:'url("coffeeWallpaper.jpg")'}}*/} 
 
             <div className="cardsPageShape">
                 <div className="cardsPageShapeInside">
-                    {recipe?.map((item, idx) => (
-                        <RecipeCard recipe={item}/>
+                    {filteredRecipe?.map((item, idx) => (
+                        <RecipeCard key={idx} titleInfo={item}/>
                     ))}                   
                     
                 </div>

@@ -5,6 +5,7 @@ import Home from './Components/Home';
 
 import CategoryMain from './Components/CategoryMain'
 import RecipePage from './Components/RecipePage'
+import AddRecipe from './Components/AddRecipe'
 
 export default function Routes() {
     
@@ -19,6 +20,9 @@ export default function Routes() {
             </Route>
             <Route path="/receipedetail/:name" exact>          
                 <RecipePage/>      
+            </Route>
+            <Route path='/addrecipe' exact>          
+                <AddRecipe/>      
             </Route>
             
         </Switch>)
