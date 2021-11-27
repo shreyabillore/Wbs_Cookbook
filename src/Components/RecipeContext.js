@@ -1,14 +1,18 @@
 
             
-import React, {useState,createContext,useEffect} from 'react'
+import React, {useState,createContext,useEffect,useRef} from 'react'
 import * as contentful from 'contentful';
 
 export const RecipeContext = createContext();
 
 export default function RecipeContextProvider({children}){
 
+
+  const cookBookRef = useRef();
+
     const [recipe, setRecipe] = useState()
     const [imageUrl, setImageUrl] = useState()
+    const [updatedValue, setUpdatedValue] = useState();
 
     var client = contentful.createClient({
         space: '1w8dvqpp824f',
@@ -35,7 +39,7 @@ const client_image = contentful.createClient({
         console.log(imageUrl)
 
        return (
-        <RecipeContext.Provider value={{recipe,setRecipe,imageUrl,client}} >
+        <RecipeContext.Provider value={{recipe,setRecipe,imageUrl,client,updatedValue, setUpdatedValue,cookBookRef}} >
           {children} 
         </RecipeContext.Provider>
      )

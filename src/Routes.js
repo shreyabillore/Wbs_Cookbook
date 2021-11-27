@@ -18,7 +18,7 @@ export default function Routes() {
             <Route path="/cards/:title" exact>          
                 <CategoryMain/>      
             </Route>
-            <Route path="/receipedetail/:name" exact>          
+            <Route path="/receipedetail/:entryId" exact>          
                 <RecipePage/>      
             </Route>
             <Route path='/addrecipe' exact>          
