@@ -5,9 +5,10 @@ import * as contentful from 'contentful';
 import { createClient } from 'contentful-management'
 import { useEffect } from 'react';
 import { GiConsoleController } from 'react-icons/gi';
+import RecipePage from './RecipePage';
 
 
-export default function AddRecipe() {
+export default function AddRecipe({operation}) {
 
     //creating client for contentful and fetching env
 
@@ -19,6 +20,7 @@ export default function AddRecipe() {
         XContentfulContentType: 'coffee'
     })
 
+    console.log(operation)
     //state defnition
     
     const [addRecipie, setAddRecipie] = useState({
@@ -33,6 +35,8 @@ export default function AddRecipe() {
     // Entry creation on submit
 
     function handleClick() {
+
+      if(operation='edit')
       setThank('Thank you for your contribution!!')
       console.log('aray data:',addRecipie.ingredients)
         client.getSpace('1w8dvqpp824f')
